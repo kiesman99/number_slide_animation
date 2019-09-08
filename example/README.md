@@ -1,4 +1,4 @@
-# example
+# Example
 
 A simple example
 
@@ -27,3 +27,5 @@ class Example extends StatelessWidget {
   }
 }
 ```
+
+![Samlpe](../pub_assets/sample.gif)
