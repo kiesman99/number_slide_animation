@@ -1,8 +1,37 @@
 # number_slide_animation
 
-With this package you can display a number using a neat sliding animation
+With this package you can display a number using a neat sliding animation.
 
 ![Sample](./pub_assets/sample.gif)
+
+```dart
+class Example extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Simple Example"),
+      ),
+      body: Container(
+        child: Center(
+          child: NumberSlideAnimation(
+            number: "12345678987654321",
+            duration: const Duration(seconds: 2),
+            curve: Curves.bounceIn,
+            textStyle: TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.bold
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+I wanted this kind of Animation in my application and thought some of you may want to use it too.
+It is very easy to set up and can be used for example as a neat intro animation.
 
 # Todo
 
