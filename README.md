@@ -6,8 +6,8 @@ With this package you can display a number using a neat sliding animation
 
 # Todo
 
-[ ] Add functionality to set a custom delay for each number
-[ ] Add functionality to set a delayed start
+- [ ] Add functionality to set a custom delay for each number
+- [ ] Add functionality to set a delayed start
 
 # License
 
