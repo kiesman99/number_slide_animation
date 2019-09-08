@@ -34,20 +34,16 @@ class Example extends StatelessWidget {
         title: Text("Simple Example"),
       ),
       body: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            NumberSlideAnimation(
-              number: "12345678987654321",
-              duration: const Duration(seconds: 2),
-              curve: Curves.decelerate,
-              textStyle: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold
-              ),
+        child: Center(
+          child: NumberSlideAnimation(
+            number: "12345678987654321",
+            duration: const Duration(seconds: 2),
+            curve: Curves.decelerate,
+            textStyle: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold
             ),
-          ],
+          ),
         )
       ),
     );
