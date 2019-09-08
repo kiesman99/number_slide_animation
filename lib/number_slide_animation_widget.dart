@@ -69,7 +69,7 @@ class _NumberSlideAnimationState extends State<NumberSlideAnimation> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       key: _rowKey,
       children: List.generate(widget.number.length, (position) {
         return NumberCol(
