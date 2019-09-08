@@ -30,7 +30,6 @@ class NumberSlideAnimation extends StatefulWidget {
   /// defaults to: Curves.easeIn
   final Curve curve;
 
-
   NumberSlideAnimation(
       {@required this.number,
       this.textStyle = const TextStyle(fontSize: 16.0),
@@ -51,7 +50,7 @@ class _NumberSlideAnimationState extends State<NumberSlideAnimation> {
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance.addPostFrameCallback((_){
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       print(getRowSize().width.toString());
       setState(() {
         _width = getRowSize().width;
