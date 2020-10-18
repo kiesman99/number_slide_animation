@@ -40,6 +40,7 @@ class Example extends StatelessWidget {
           duration: const Duration(seconds: 2),
           curve: Curves.decelerate,
           textStyle: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          format: NumberFormatMode.comma,
         ),
       )),
     );
