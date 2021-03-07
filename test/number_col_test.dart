@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
-import 'package:number_slide_animation/number_col.dart';
+import 'package:number_slide_animation/src/number_col.dart';
 
 void main() {
   test('try initializing with invalid number', () {

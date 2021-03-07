@@ -13,12 +13,12 @@ class NumberCol extends StatefulWidget {
   // The curve that is used during the animation
   final Curve curve;
 
-  NumberCol(
-      {@required this.animateTo,
-      @required this.textStyle,
-      @required this.duration,
-      @required this.curve})
-      : assert(animateTo != null && animateTo >= 0 && animateTo < 10);
+  NumberCol({
+    required this.animateTo,
+    required this.textStyle,
+    required this.duration,
+    required this.curve,
+  }) : assert(animateTo >= 0 && animateTo < 10);
 
   @override
   _NumberColState createState() => _NumberColState();
@@ -26,7 +26,7 @@ class NumberCol extends StatefulWidget {
 
 class _NumberColState extends State<NumberCol>
     with SingleTickerProviderStateMixin {
-  ScrollController _scrollController;
+  ScrollController? _scrollController;
 
   double _elementSize = 0.0;
 
@@ -36,11 +36,11 @@ class _NumberColState extends State<NumberCol>
 
     super.initState();
 
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _elementSize = _scrollController.position.maxScrollExtent / 10;
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      _elementSize = _scrollController!.position.maxScrollExtent / 10;
       setState(() {});
 
-      _scrollController.animateTo(_elementSize * widget.animateTo,
+      _scrollController!.animateTo(_elementSize * widget.animateTo,
           duration: widget.duration, curve: widget.curve);
     });
   }
