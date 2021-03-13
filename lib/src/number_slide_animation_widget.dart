@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'number_col.dart';
+import 'src/../number_col.dart';
 
 /// This widget will display the provided [number] given in the constructor
 ///
@@ -30,12 +30,12 @@ class NumberSlideAnimation extends StatefulWidget {
   /// defaults to: Curves.easeIn
   final Curve curve;
 
-  NumberSlideAnimation(
-      {@required this.number,
-      this.textStyle = const TextStyle(fontSize: 16.0),
-      this.duration = const Duration(milliseconds: 1500),
-      this.curve = Curves.easeIn})
-      : assert(int.tryParse(number) != null);
+  NumberSlideAnimation({
+    required this.number,
+    this.textStyle = const TextStyle(fontSize: 16.0),
+    this.duration = const Duration(milliseconds: 1500),
+    this.curve = Curves.easeIn,
+  }) : assert(int.tryParse(number) != null);
 
   @override
   _NumberSlideAnimationState createState() => _NumberSlideAnimationState();
@@ -44,13 +44,13 @@ class NumberSlideAnimation extends StatefulWidget {
 class _NumberSlideAnimationState extends State<NumberSlideAnimation> {
   double _width = 1000.0;
 
-  GlobalKey _rowKey = new GlobalKey();
+  GlobalKey _rowKey = GlobalKey();
 
   @override
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
       print(getRowSize().width.toString());
       setState(() {
         _width = getRowSize().width;
@@ -61,7 +61,8 @@ class _NumberSlideAnimationState extends State<NumberSlideAnimation> {
   }
 
   Size getRowSize() {
-    final RenderBox box = _rowKey.currentContext.findRenderObject();
+    final RenderBox box =
+        _rowKey.currentContext!.findRenderObject() as RenderBox;
     return box.size;
   }
 

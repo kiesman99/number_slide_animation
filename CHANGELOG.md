@@ -1,3 +1,7 @@
+## [0.2.0] - 2021-03-07
+
+* Migrated to null safety
+
 ## [0.1.1] - 2019-09-08
 
 * Added some more description to README
