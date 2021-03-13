@@ -1,6 +1,6 @@
 ## [0.2.0] - 2021-03-07
 
-* Migrated to null safety
+* Migrated to null safety - [#9](https://github.com/kiesman99/number_slide_animation/pull/9)
 
 ## [0.1.1] - 2019-09-08
 
