@@ -36,7 +36,7 @@ class _NumberColState extends State<NumberCol>
 
     super.initState();
 
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _elementSize = _scrollController!.position.maxScrollExtent / 10;
       setState(() {});
 
