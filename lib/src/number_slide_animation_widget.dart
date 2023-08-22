@@ -50,7 +50,7 @@ class _NumberSlideAnimationState extends State<NumberSlideAnimation> {
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       print(getRowSize().width.toString());
       setState(() {
         _width = getRowSize().width;
